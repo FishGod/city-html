@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>都市信息网</title>
+  <link type="text/css" rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript">
+  	 function request(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = { };
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+
+       
+  	
+  function check(){
+	  window.location.href="infoList.html";
+  }
+  function pay(){
+	  window.location.href="default.html";
+  }
+  </script>
+</head>
+<body>
+	<div align="left">
+			
+		<table style="text-align:center;margin-left: 10px;" bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="920">
+			
+			<tbody><tr>
+				<td align="left" height="400" bgcolor="#FFFFFF" valign="top" width="690">        
+					<!-- 列表显示免费信息 -->
+					<table style="margin-top:5" border="0" cellpadding="0" cellspacing="0" width="670">
+					
+						<tbody><tr height="30"> 
+							<td style="text-indent:5" valign="bottom"><font color="#004790"><b>■查看详细信息</b></font>
+							<input id="checkBut" value="审核通过" onclick="check()"  type="button">
+							<input id="payBut" value="设置付费" onclick="pay()"  type="button">
+							</td>
+						</tr>            
+						<tr height="1">
+							<td></td>
+						</tr>
+						<tr bgcolor="#FAFCF5">
+							<td style="border:1 solid">
+								<table style="font-size:14px;" border="0" cellpadding="2" cellspacing="0" width="100%">
+									<tbody><tr height="30">
+										<td style="text-indent:20" width="20%">信息类别：</td>
+										<td>招聘信息</td>
+									</tr>
+									<tr height="30">
+										<td style="text-indent:20">发布时间：</td>
+										<td>2015-08-27 22:44:35</td>
+									</tr>
+									<tr height="30">
+										<td style="text-indent:20">信息标题：</td>
+										<td>我是测试数据</td>
+									</tr>
+									<tr height="30">
+										<td colspan="2" style="text-indent:20">信息内容：</td>
+									</tr>
+									<tr height="60">
+										<td colspan="2" style="text-indent:20">长三角青软实训基地成立啦，啦，啦啦啦，啦啦啦</td>
+									</tr>
+									<tr height="40">
+										<td colspan="2" align="left">
+											<table style="word-break:break-all;font-size:14px;" border="0" cellpadding="0" cellspacing="0" width="630">
+												<tbody><tr align="left" height="20">
+													<td>联系电话：12345678</td>
+													<td>联系人：长三角青软实训</td>
+													<td>E-mail：123@123.com</td>
+												</tr>
+											</tbody></table>                      
+										</td>
+									</tr>
+									<tr height="40">
+										<td colspan="2" align="center"><a href="javascript:window.history.back(-1)">返回</a></td>
+									</tr>                              
+								
+								</tbody></table>
+							</td>
+						</tr>
+					</tbody></table>
+					<br>
+				</td>
+			</tr>      
+		</tbody></table>
+		<!-- 页脚 -->
+	</div>
+
+
+</body>
+ <script type="text/javascript">
+ var type = decodeURI(request("type"));//De=‘未设置’
+  	   if(type==1){
+  	   	  document.getElementById("payBut").style.display="none";
+  	   	}else{
+  	   		 document.getElementById("checkBut").style.display="none";
+  	   		
+  	   		}
+</script>
+</html>
